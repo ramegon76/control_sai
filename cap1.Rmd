@@ -57,6 +57,7 @@ Se refiere a la definición del esquema de los componentes (actores, modelos de 
 ## **UNECE**
 
 <br>
+
 ### [GSBPM](https://statswiki.unece.org/display/GSBPM/Generic+Statistical+Business+Process+Model){target="_blank"}
 
 ### [GSBPM Finer level](https://statswiki.unece.org/display/GSBPM/Finer-level+of+Activities+of+Generic+Statistical+Business+Process+Model){target="_blank"} 
