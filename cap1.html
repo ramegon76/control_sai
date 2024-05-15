@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Revelado de Arquitecturas</title>
+
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Control de Proyectos</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Generales
+  </a>
+</li>
+<li>
+  <a href="cap1.html">
+    <span class="fa fa-tasks"></span>
+     
+    Revelado de Arquitecturas
+  </a>
+</li>
+<li>
+  <a href="cap2.html">
+    <span class="fa fa-building"></span>
+     
+    Temas DGAII
+  </a>
+</li>
+<li>
+  <a href="cap3.html">
+    <span class="fa fa-bar-chart"></span>
+     
+    Recursos
+  </a>
+</li>
+<li>
+  <a href="cap4.html">
+    <span class="fa fa-bar-chart"></span>
+     
+    Administrativos
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><strong>Revelado de
+Arquitecturas</strong></h1>
+
+</div>
+
+
+<p><br> <br> <br></p>
+<div class=text-justify>
+
+<div id="arquitectura-de-datos" class="section level1">
+<h1><strong>Arquitectura de datos</strong></h1>
+<p><br></p>
+<div id="definición-de-arquitectura-de-información-moe-de-la-dgiai"
+class="section level3">
+<h3>Definición de Arquitectura de información (MOE de la DGIAI)</h3>
+<p>Se refiere a la definición del esquema de los componentes (actores,
+modelos de datos, estándares, sistemas tecnológicos), y sus
+interrelaciones, que conforman la estructura que soporta los procesos de
+producción de información estadística y geográfica.</p>
+</div>
+<div id="plan-de-arquitectura" class="section level3">
+<h3><a
+href="https://365inegi-my.sharepoint.com/:w:/r/personal/raul_mejia_inegi_org_mx/_layouts/15/Doc.aspx?sourcedoc=%7B23E2A8D9-50BF-4DB3-AE41-44363191F80D%7D&amp;file=Plan%20de%20Arquitectura%20de%20Datos.docx&amp;action=default&amp;mobileredirect=true"
+target="_blank">Plan de Arquitectura</a></h3>
+<p><br> <br></p>
+</div>
+</div>
+<div id="marcos-de-referencia" class="section level1">
+<h1><strong>Marcos de referencia</strong></h1>
+<p><br></p>
+<div id="dama-y-togaf" class="section level2">
+<h2><strong>DAMA y TOGAF</strong></h2>
+<p><br></p>
+<div id="dama-dmbok" class="section level3">
+<h3><a href="pdfs/DAMA-DMBOK.pdf" target="_blank">DAMA-DMBOK</a></h3>
+</div>
+<div id="estándar-togaf" class="section level3">
+<h3><a href="pdfs/togaf-standard9.2.pdf" target="_blank">Estándar
+TOGAF</a></h3>
+</div>
+<div id="glosario-togaf" class="section level3">
+<h3><a href="pdfs/TOGAF_GlosarioEspañol_OG.pdf" target="_blank">Glosario
+TOGAF</a></h3>
+</div>
+<div id="diagramado-togaf" class="section level3">
+<h3><a href="pdfs/Data%20Architecture.pdf" target="_blank">Diagramado
+TOGAF</a></h3>
+<p><br></p>
+</div>
+</div>
+<div id="bpm-y-arquitectura-empresarial" class="section level2">
+<h2><strong>BPM y Arquitectura Empresarial</strong></h2>
+<p><br></p>
+<div
+id="definición-de-principios-de-arquitectura-para-arquitectura-empresarial-de-la-organización"
+class="section level3">
+<h3><a href="pdfs/IBERO-Handbook_MR_1-43-52.pdf"
+target="_blank">Definición de principios de arquitectura para
+arquitectura empresarial de la organización</a></h3>
+</div>
+<div id="business-process-management" class="section level3">
+<h3><a href="https://bpmnotebook.wordpress.com/modelos-operacionales/"
+target="_blank">Business Process Management</a></h3>
+</div>
+<div
+id="modelo-de-arquitectura-organizacional-para-empresas-medianas-en-méxico"
+class="section level3">
+<h3><a
+href="pdfs/Arquitectura%20Empresarial%20-%20Victor%20Amezcua%20-%20Final%20para%20impresión1.pdf"
+target="_blank">Modelo de Arquitectura Organizacional para Empresas
+Medianas en México</a></h3>
+</div>
+<div id="lineamientos-para-la-ai" class="section level3">
+<h3><a
+href="https://365inegi-my.sharepoint.com/:w:/r/personal/raul_mejia_inegi_org_mx/_layouts/15/Doc.aspx?sourcedoc=%7BB8C9B8BC-3A2A-4B2E-900D-4EDB7E69CB11%7D&amp;file=Lineamientos_AI.docx&amp;action=default&amp;mobileredirect=true"
+target="_blank">Lineamientos para la AI</a></h3>
+<p><br></p>
+</div>
+</div>
+<div id="unece" class="section level2">
+<h2><strong>UNECE</strong></h2>
+<p><br> ### <a
+href="https://statswiki.unece.org/display/GSBPM/Generic+Statistical+Business+Process+Model"
+target="_blank">GSBPM</a></p>
+<div id="gsbpm-finer-level" class="section level3">
+<h3><a
+href="https://statswiki.unece.org/display/GSBPM/Finer-level+of+Activities+of+Generic+Statistical+Business+Process+Model"
+target="_blank">GSBPM Finer level</a></h3>
+</div>
+<div id="cspa" class="section level3">
+<h3><a
+href="https://statswiki.unece.org/display/CSPA/Common+Statistical+Production+Architecture"
+target="_blank">CSPA</a></h3>
+</div>
+<div id="csda-2.0" class="section level3">
+<h3><a href="https://statswiki.unece.org/display/DA/CSDA+2.0"
+target="_blank">CSDA 2.0</a></h3>
+</div>
+<div id="gsim-2.0-wiki-clickable" class="section level3">
+<h3><a href="https://statswiki.unece.org/display/gsim"
+target="_blank">GSIM 2.0 Wiki Clickable</a></h3>
+</div>
+<div id="gsim-2.0-glosario" class="section level3">
+<h3><a href="https://unece.github.io/GSIM-2.0/GSIMv2.html"
+target="_blank">GSIM 2.0 Glosario</a></h3>
+</div>
+<div id="gsim-1.2-glosario" class="section level3">
+<h3><a
+href="https://statswiki.unece.org/display/gsim/GSIM+v1.2+Glossary"
+target="_blank">GSIM 1.2 Glosario</a></h3>
+</div>
+<div id="linking-gsbpm---gsim" class="section level3">
+<h3><a
+href="https://365inegi.sharepoint.com/sites/dgiai/100_DGG_DGIAII/150_DAA_DGAI/Documentos%20compartidos/SAI/Estrategia%20de%20arquitectura/Apoyo/Linking%20GSBPM%20-%20GSIM"
+target="_blank">Linking GSBPM - GSIM</a></h3>
+</div>
+<div id="information-flow-within-gsbpm-using-gsim"
+class="section level3">
+<h3><a
+href="https://statswiki.unece.org/display/GSBPM/Information+flow+within+GSBPM+using+GSIM"
+target="_blank">Information flow within GSBPM using GSIM</a></h3>
+</div>
+<div id="mapping-to-gsim-business-group" class="section level3">
+<h3><a href="https://github.com/linked-statistics/COOS/issues/4"
+target="_blank">Mapping to GSIM Business Group</a></h3>
+</div>
+<div id="information-flow-within-gsbpm-using-gsim-1"
+class="section level3">
+<h3><a
+href="https://statswiki.unece.org/display/GSBPM/Information+flow+within+GSBPM+using+GSIM"
+target="_blank">Information flow within GSBPM using GSIM</a></h3>
+</div>
+<div id="mapping-gsim---sdmx---ddi" class="section level3">
+<h3><a
+href="https://statswiki.unece.org/display/gsim/GSIM+and+standards"
+target="_blank">Mapping GSIM - SDMX - DDI</a></h3>
+<p><br></p>
+</div>
+</div>
+<div id="sdmx-y-ddi" class="section level2">
+<h2><strong>SDMX y DDI</strong></h2>
+<p><br></p>
+<div id="sdmx-documentation" class="section level3">
+<h3><a
+href="https://sdmx.org/wp-content/uploads/SDMX_3-0-0_SECTION_2_FINAL-1_0.pdf"
+target="_blank">SDMX Documentation</a></h3>
+</div>
+<div id="ddi-documentation" class="section level3">
+<h3><a
+href="https://ddialliance.github.io/ddimodel-web/DDI-L-3.3/topics/All%20Content%20Items/"
+target="_blan">DDI Documentation</a></h3>
+</div>
+<div id="sdmx-project-management-guideline" class="section level3">
+<h3><a
+href="https://statswiki.unece.org/display/SDMXPM/Checklist+for+SDMX+Design+Projects+Home"
+target="_blan">SDMX Project Management Guideline</a></h3>
+<p><br> <br></p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

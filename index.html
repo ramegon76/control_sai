@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Generales</title>
+
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Control de Proyectos</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Generales
+  </a>
+</li>
+<li>
+  <a href="cap1.html">
+    <span class="fa fa-tasks"></span>
+     
+    Revelado de Arquitecturas
+  </a>
+</li>
+<li>
+  <a href="cap2.html">
+    <span class="fa fa-building"></span>
+     
+    Temas DGAII
+  </a>
+</li>
+<li>
+  <a href="cap3.html">
+    <span class="fa fa-bar-chart"></span>
+     
+    Recursos
+  </a>
+</li>
+<li>
+  <a href="cap4.html">
+    <span class="fa fa-bar-chart"></span>
+     
+    Administrativos
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><strong>Generales</strong></h1>
+
+</div>
+
+
+<p><br></p>
+<div class=text-justify>
+
+
+
+<div id="sitios-personales" class="section level1">
+<h1><strong>Sitios personales</strong></h1>
+<p><br></p>
+<div id="one-drive-personal" class="section level3">
+<h3><a
+href="https://365inegi-my.sharepoint.com/personal/raul_mejia_inegi_org_mx/_layouts/15/onedrive.aspx"
+target="_blank">One Drive Personal</a></h3>
+</div>
+<div id="github-personal" class="section level3">
+<h3><a href="https://github.com/ramegon76" target="_blank">Github
+Personal</a></h3>
+</div>
+<div id="tablero-ptracking-editable" class="section level3">
+<h3><a href="https://ramegon76.github.io/tablero_ptracking/"
+target="_blank">Tablero PTracking editable</a></h3>
+</div>
+<div id="funciones-de-la-dgaii" class="section level3">
+<h3><a
+href="https://365inegi-my.sharepoint.com/:p:/r/personal/raul_mejia_inegi_org_mx/_layouts/15/Doc.aspx?sourcedoc=%7BD08B93AA-75BE-47C4-AF52-076F65997FA9%7D&amp;file=3.%20Estructura_Funciones_NuevaDGAII.pptx&amp;action=edit&amp;mobileredirect=true"
+target="_blank">Funciones de la DGAII</a></h3>
+<p><br> <br></p>
+</div>
+</div>
+<div id="sitios-institucionales" class="section level1">
+<h1><strong>Sitios institucionales</strong></h1>
+<p><br></p>
+<div id="pesnieg-2022-2046" class="section level3">
+<h3><a href="pdfs/PESNIEG_2022-2046.pdf" target="_blank">PESNIEG
+2022-2046</a></h3>
+</div>
+<div id="pneg_2019-2024-actualización-2023" class="section level3">
+<h3><a href="pdfs/PNEG_2019-2024_Actualizacion-2023.pdf"
+target="_blank">PNEG_2019-2024 Actualización 2023</a></h3>
+</div>
+<div id="paeg-2024-tomo-i" class="section level3">
+<h3><a href="pdfs/PAEG_2024.pdf" target="_blank">PAEG 2024 Tomo
+I</a></h3>
+</div>
+<div id="paeg-2024-tomo-ii" class="section level3">
+<h3><a href="pdfs/PAEG_2024_Ae.pdf" target="_blank">PAEG 2024 Tomo
+II</a></h3>
+</div>
+<div id="acceso-paeg" class="section level3">
+<h3><a href="https://www.snieg.mx/paeg/" target="_blank">Acceso
+PAEG</a></h3>
+<p>Usuario: SNIEG.DGIAI Clave: P8rcQWj3</p>
+<p><br> <br></p>
+</div>
+</div>
+<div id="acceso-rápido" class="section level1">
+<h1><strong>Acceso rápido</strong></h1>
+<p><br></p>
+<div id="sharepoint-de-la-dgai" class="section level3">
+<h3><a
+href="https://365inegi.sharepoint.com/sites/dgiai/100_DGG_DGIAII/150_DAA_DGAI/Documentos%20compartidos/Forms/AllItems.aspx?viewpath=%2Fsites%2Fdgiai%2F100%5FDGG%5FDGIAII%2F150%5FDAA%5FDGAI%2FDocumentos%20compartidos%2FForms%2FAllItems%2Easpx"
+target="_blank">SharePoint de la DGAI</a></h3>
+</div>
+<div id="sistema-ptracking" class="section level3">
+<h3><a href="https://ptracking.snieg.mx/" target="_blank">Sistema
+PTracking</a></h3>
+</div>
+<div id="administrador-de-power-bi" class="section level3">
+<h3><a href="https://app.powerbi.com/home?experience=power-bi"
+target="_blank">Administrador de Power BI</a></h3>
+</div>
+<div id="inventario-de-programas-de-información" class="section level3">
+<h3><a href="https://ptracking.snieg.mx/ipi/" target="_blank">Inventario
+de Programas de Información</a></h3>
+<p><br> <br></p>
+</div>
+</div>
+<div id="programa-de-trabajo-2024" class="section level1">
+<h1><strong>Programa de Trabajo 2024</strong></h1>
+<p><br></p>
+<div id="carpeta-con-programa-y-ficha" class="section level3">
+<h3><a
+href="https://365inegi.sharepoint.com/sites/dgiai/100_DGG_DGIAII/150_DAA_DGAI/Documentos%20compartidos/2024%20PAT/2024-01-26%20Revisados%20por%20Manuel/SAI"
+target="_blank">Carpeta con Programa y Ficha</a></h3>
+</div>
+<div id="programa-anual-de-trabajo-2024-del-inegi"
+class="section level3">
+<h3><a href="pdfs/Ood_19Dic23.pdf" target="_blank">Programa Anual de
+Trabajo 2024 del INEGI</a></h3>
+<p><br> <br></p>
+</div>
+</div>
+<div id="normativos" class="section level1">
+<h1><strong>Normativos</strong></h1>
+<p><br></p>
+<div id="reglamento-inegi" class="section level3">
+<h3><a href="pdfs/R_INEGI_20.pdf" target="_blank">Reglamento
+INEGI</a></h3>
+</div>
+<div id="actualización-del-reglamento-inegi" class="section level3">
+<h3><a href="pdfs/Ax_04Mar24.pdf" target="_blank">Actualización del
+Reglamento INEGI</a></h3>
+</div>
+<div id="moe-de-la-dgiai" class="section level3">
+<h3><a href="pdfs/MO2_12Sep23.pdf" target="_blank">MOE de la
+DGIAI</a></h3>
+</div>
+<div id="mp-de-la-dgaii" class="section level3">
+<h3><a href="pdfs/MP_15Oct21.pdf" target="_blank">MP de la
+DGAII</a></h3>
+<p><br></p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

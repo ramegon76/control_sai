@@ -1,0 +1,29 @@
+---
+title: "**Administrativos**"
+--- 
+<br>
+<br>
+<br>
+
+<div class=text-justify>
+
+# **SIA**
+
+<br>
+
+
+### [Sistema Institucional de Archivos](https://365inegi.sharepoint.com/sites/sia/SitePages/Inicio.aspx){target="_blank"} 
+### [SIA Gestión Archivos](https://sia.inegi.org.mx/sia_gestion/index.jsp){target="_blank"} 
+
+<br>
+<br>
+
+
+# **Otros**
+
+<br>
+
+### [Extranet (login)](https://extranet.inegi.org.mx/login.html){target="_blank"} 
+
+
+### [Capacitación al clic](https://365inegi.sharepoint.com/sites/Capacitacionalclic){target="_blank"}
