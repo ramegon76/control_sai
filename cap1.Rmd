@@ -18,8 +18,16 @@ Se refiere a la definición del esquema de los componentes (actores, modelos de 
 
 
 ### [Plan de Arquitectura](https://365inegi-my.sharepoint.com/:w:/r/personal/raul_mejia_inegi_org_mx/_layouts/15/Doc.aspx?sourcedoc=%7B23E2A8D9-50BF-4DB3-AE41-44363191F80D%7D&file=Plan%20de%20Arquitectura%20de%20Datos.docx&action=default&mobileredirect=true){target="_blank"}
+
+### [SharePoint carpetas SAPP](https://365inegi.sharepoint.com/sites/dgiai/100_DGG_DGIAII/150_DAA_DGAI/SAPP/AI_PI_VersionFinal_Web/Forms/AllItems.aspx?xsdata=MDV8MDJ8fGZhZjYyNzM5YjkzZTQ5OWY3N2U2MDhkYzY2MDE5Yzg1fGNhOGYwOWY1MzM1ZTRmYzU4MDQxZjViNDcyYTAyZWVmfDB8MHw2Mzg0OTc0MDQyODY3NjA5MzR8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxMMk5vWVhSekx6RTVPakJtWVRneU1HSm1MVEJpTVdRdE5EbGhOeTFoWlRCbExXSTRaREJoTkdFM01EUmlPRjgwWm1ReU5XWTRNaTAwWkRBMkxUUmxOakl0WW1aa055MWlaV0pqT0RCbE5UVTJZMlJBZFc1eExtZGliQzV6Y0dGalpYTXZiV1Z6YzJGblpYTXZNVGN4TkRFME16WXlOelUzT1E9PXw4YWI0ZjBjY2ZiNjY0ODlhNzdlNjA4ZGM2NjAxOWM4NXw4YjRlYzIzNGUzOWE0ZGZmOWRjNTE5N2U3MTJkMWMyZA%3D%3D&sdata=Z0FWdGVRVzBEVFBsczNGVzVTR3JhQmRLd1VCZkc1cFh4Q0ZlZElCSzVYYz0%3D&ovuser=ca8f09f5-335e-4fc5-8041-f5b472a02eef%2CANDRES.ORTIZ%40inegi.org.mx){target="_blank"}
+
+### [SAPP](https://365inegi.sharepoint.com/sites/dgiai/100_DGG_DGIAII/150_DAA_DGAI/SAPP/SitePages/Inicio1.aspx){target="_blank"}
+
 <br>
 <br>
+
+
+
 
 
 # **Marcos de referencia**
@@ -58,28 +66,31 @@ Se refiere a la definición del esquema de los componentes (actores, modelos de 
 
 <br>
 
-### [GSBPM](https://statswiki.unece.org/display/GSBPM/Generic+Statistical+Business+Process+Model){target="_blank"}
+### [GSBPM Wiki](https://statswiki.unece.org/display/GSBPM/Generic+Statistical+Business+Process+Model){target="_blank"}
 
-### [GSBPM Finer level](https://statswiki.unece.org/display/GSBPM/Finer-level+of+Activities+of+Generic+Statistical+Business+Process+Model){target="_blank"} 
+### [GSBPM Documento](https://365inegi.sharepoint.com/:w:/s/dgiai/100_DGG_DGIAII/150_DAA_DGAI/EXDoX3rQTodMubQp8i_902YBj5MbF6mf-0S4IJIvGf-Vig?e=xCtDOt){target="_blank"}
 
+### [GSBPM Finer level Wiki](https://statswiki.unece.org/display/GSBPM/Finer-level+of+Activities+of+Generic+Statistical+Business+Process+Model){target="_blank"} 
 
-### [CSPA](https://statswiki.unece.org/display/CSPA/Common+Statistical+Production+Architecture){target="_blank"}
+### [GSBPM Finer level Documento](https://365inegi.sharepoint.com/:w:/s/dgiai/100_DGG_DGIAII/150_DAA_DGAI/EcEHCZ4CyZRJtyOpECY2p_IBBv5bZtSjdVtK69EMErCZpQ?e=Jkgwfu){target="_blank"} 
 
-### [CSDA 2.0](https://statswiki.unece.org/display/DA/CSDA+2.0){target="_blank"}
+### [CSPA 1.5 Wiki](https://statswiki.unece.org/display/CSPA/Common+Statistical+Production+Architecture){target="_blank"}
 
-### [GSIM 2.0 Wiki Clickable ](https://statswiki.unece.org/display/gsim){target="_blank"}
+### [CSPA 1.5 Documento](https://365inegi.sharepoint.com/:w:/s/dgiai/100_DGG_DGIAII/150_DAA_DGAI/EZYmNsvgqKxLhEsiWDNFA4MBPQ9lkCNQkj0WaKSVmoKvJA?e=ni9jKu){target="_blank"}
 
-### [GSIM 2.0 Glosario](https://unece.github.io/GSIM-2.0/GSIMv2.html){target="_blank"}
+### [CSDA 2.0 Wiki](https://statswiki.unece.org/display/DA/CSDA+2.0){target="_blank"}
+
+### [CSDA 2.0 Documento](https://365inegi.sharepoint.com/:w:/s/dgiai/100_DGG_DGIAII/150_DAA_DGAI/EWOxF1zhXUZBnowWxhVrzIYBCWlj4RfYRMg0Rh4WH5jj2Q?e=rxyXx4){target="_blank"}
+
+### [GSIM 2.0 ](https://unece.github.io/GSIM-2.0/GSIMv2.html){target="_blank"}
 
 ### [GSIM 1.2 Glosario](https://statswiki.unece.org/display/gsim/GSIM+v1.2+Glossary){target="_blank"}
 
-### [Linking GSBPM - GSIM](https://365inegi.sharepoint.com/sites/dgiai/100_DGG_DGIAII/150_DAA_DGAI/Documentos%20compartidos/SAI/Estrategia%20de%20arquitectura/Apoyo/Linking%20GSBPM%20-%20GSIM){target="_blank"}
+### [Linking GSBPM - GSIM](https://365inegi.sharepoint.com/:w:/r/sites/dgiai/100_DGG_DGIAII/150_DAA_DGAI/_layouts/15/Doc.aspx?sourcedoc=%7B26721B38-5274-45AE-BEBB-93AC00F4369C%7D&file=Linking%20GSBPM%20and%20GSIM%20task%20team%20report.docx&action=default&mobileredirect=true){target="_blank"}
 
 ### [Information flow within GSBPM using GSIM](https://statswiki.unece.org/display/GSBPM/Information+flow+within+GSBPM+using+GSIM){target="_blank"}
 
 ### [Mapping to GSIM Business Group](https://github.com/linked-statistics/COOS/issues/4){target="_blank"}
-
-### [Information flow within GSBPM using GSIM](https://statswiki.unece.org/display/GSBPM/Information+flow+within+GSBPM+using+GSIM){target="_blank"}
 
 ### [Mapping GSIM - SDMX - DDI ](https://statswiki.unece.org/display/gsim/GSIM+and+standards){target="_blank"}
 

@@ -11,12 +11,10 @@ title: "**Temas DGAII**"
 
 
 
-# **MPEG, Normatividad e Implementación**
+# **Normatividad asociada con el MPEG**
 
 <br>
 
-### [MPEG Versión original](pdfs/Modelo_Procesos_INEGI_v1.0.pdf){target="_blank"}
-### [Actividades NTPPIEG](pdfs/Actividades_NTPPIEG.pdf){target="_blank"}
 ### [Lineamientos para la Integración y Actualización del Inventario de Programas de Información del Instituto Nacional de Estadística y Geografía](pdfs/Odl_01Nov23.pdf){target="_blank"}
 ### [Lineamientos de Coordinación Operativa](pdfs/Lod_15Jun21.pdf){target="_blank"} 
 ### [Lineamientos del Proceso de Gestión de Cambios en los Programas de Información Estadística y Geográfica](pdfs/Lod_15Oct19.pdf){target="_blank"}

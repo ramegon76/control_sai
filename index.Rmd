@@ -8,23 +8,6 @@ title: "**Generales**"
 
 
 
-# **Sitios personales**
-
-<br>
-
-### [One Drive Personal](https://365inegi-my.sharepoint.com/personal/raul_mejia_inegi_org_mx/_layouts/15/onedrive.aspx){target="_blank"} 
-
-### [Github Personal](https://github.com/ramegon76){target="_blank"}
-
-### [Tablero PTracking editable](https://ramegon76.github.io/tablero_ptracking/){target="_blank"}
-
-### [Funciones de la DGAII](https://365inegi-my.sharepoint.com/:p:/r/personal/raul_mejia_inegi_org_mx/_layouts/15/Doc.aspx?sourcedoc=%7BD08B93AA-75BE-47C4-AF52-076F65997FA9%7D&file=3.%20Estructura_Funciones_NuevaDGAII.pptx&action=edit&mobileredirect=true){target="_blank"}
-
-
-
-<br>
-<br>
-
 # **Sitios institucionales**
 
 <br>
@@ -44,6 +27,8 @@ Clave: P8rcQWj3
 
 <br>
 
+### [MPEG Documento](https://365inegi.sharepoint.com/:w:/s/dgiai/100_DGG_DGIAII/150_DAA_DGAI/EaqnNNiIBM9IqF-HNeKUbKEBNhqULmlAeT-Y3J7zEwcNaA?e=Fjtr07){target="_blank"}
+### [Actividades NTPPIEG](pdfs/Actividades_NTPPIEG.pdf){target="_blank"}
 ### [SharePoint de la DGAI](https://365inegi.sharepoint.com/sites/dgiai/100_DGG_DGIAII/150_DAA_DGAI/Documentos%20compartidos/Forms/AllItems.aspx?viewpath=%2Fsites%2Fdgiai%2F100%5FDGG%5FDGIAII%2F150%5FDAA%5FDGAI%2FDocumentos%20compartidos%2FForms%2FAllItems%2Easpx){target="_blank"} 
 ### [Sistema PTracking](https://ptracking.snieg.mx/){target="_blank"}
 ### [Administrador de Power BI](https://app.powerbi.com/home?experience=power-bi){target="_blank"}
