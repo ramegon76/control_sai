@@ -1,5 +1,5 @@
 ---
-title: "**Temas DGAII**"
+title: "**Otros temas**"
 --- 
 <br>
 <br>
@@ -7,41 +7,18 @@ title: "**Temas DGAII**"
 
 <div class=text-justify>
 
-
-
-
-
-# **Normatividad asociada con el MPEG**
-
-<br>
-
-### [Lineamientos para la Integración y Actualización del Inventario de Programas de Información del Instituto Nacional de Estadística y Geografía](pdfs/Odl_01Nov23.pdf){target="_blank"}
-### [Lineamientos de Coordinación Operativa](pdfs/Lod_15Jun21.pdf){target="_blank"} 
-### [Lineamientos del Proceso de Gestión de Cambios en los Programas de Información Estadística y Geográfica](pdfs/Lod_15Oct19.pdf){target="_blank"}
-### [Lineamientos de Seguridad de la Información Estadística y Geográfica del Instituto Nacional de Estadística y Geografía](pdfs/Lod_19Abr21.pdf){target="_blank"}
-### [Norma para el Aseguramiento de la Calidad de la Información del INEGI](pdfs/On2_23Nov20.pdf){target="_blank"} 
-### [Red Nacional de Metadatos](https://www.inegi.org.mx/rnm/index.php/home){target="_blank"} 
-### [Guías de Procesos](https://365inegi.sharepoint.com/sites/dgiai/100_DGG_DGIAII/150_DAA_DGAI/Documentos%20compartidos/SAI/Modelado%20de%20procesos/Modelo%20gen%C3%A9rico%20de%20encuestas/Apoyo){target="_blank"} 
-
-
-
-
-<br>
-<br>
-
-
 # **Lago de datos**
 
 <br>
 
-### [Carpeta de documentos](https://365inegi-my.sharepoint.com/personal/raul_mejia_inegi_org_mx/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fraul%5Fmejia%5Finegi%5Forg%5Fmx%2FDocuments%2Fsai%2Flago%5Fde%5Fdatos){target="_blank"} 
-
-### [Paper modelado de Lago](https://ruc.udc.es/dspace/bitstream/handle/2183/25891/2017_Torres_Framework_para_el_modelado_de_un_lago_de_datos.pdf?sequence=3&isAllowed=y){target="_blank"} 
+### [Estrategia digital - Lago de Datos](https://365inegi.sharepoint.com/:b:/s/dgiai/100_DGG_DGIAII/150_DAA_DGAI/ERQUbDc5gKNOkVaXe62RDGMBHcWumdoexoU4Wg13CJ7wXA?e=PTt0I8){target="_blank"}
 
 <br>
+
+### [Estrategia digital - Lago de Datos - Anexo](https://365inegi.sharepoint.com/:b:/s/dgiai/100_DGG_DGIAII/150_DAA_DGAI/EY1hTq_CoYtMt-qpfRXr8kMBftMxaTciZCiX8ktzNfqPfQ?e=PYYzaB){target="_blank"} 
+
+
 <br>
-
-
 
 
 

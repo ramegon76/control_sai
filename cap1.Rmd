@@ -1,5 +1,5 @@
 ---
-title: "**Revelado de Arquitecturas**"
+title: "**Arquitecturas**"
 --- 
 <br>
 <br>
@@ -16,100 +16,91 @@ title: "**Revelado de Arquitecturas**"
 
 Se refiere a la definición del esquema de los componentes (actores, modelos de datos, estándares, sistemas tecnológicos), y sus interrelaciones, que conforman la estructura que soporta los procesos de producción de información estadística y geográfica. 
 
+<br>
 
 ### [Plan de Arquitectura](https://365inegi-my.sharepoint.com/:w:/r/personal/raul_mejia_inegi_org_mx/_layouts/15/Doc.aspx?sourcedoc=%7B23E2A8D9-50BF-4DB3-AE41-44363191F80D%7D&file=Plan%20de%20Arquitectura%20de%20Datos.docx&action=default&mobileredirect=true){target="_blank"}
 
-### [SharePoint carpetas SAPP](https://365inegi.sharepoint.com/sites/dgiai/100_DGG_DGIAII/150_DAA_DGAI/SAPP/AI_PI_VersionFinal_Web/Forms/AllItems.aspx?xsdata=MDV8MDJ8fGZhZjYyNzM5YjkzZTQ5OWY3N2U2MDhkYzY2MDE5Yzg1fGNhOGYwOWY1MzM1ZTRmYzU4MDQxZjViNDcyYTAyZWVmfDB8MHw2Mzg0OTc0MDQyODY3NjA5MzR8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxMMk5vWVhSekx6RTVPakJtWVRneU1HSm1MVEJpTVdRdE5EbGhOeTFoWlRCbExXSTRaREJoTkdFM01EUmlPRjgwWm1ReU5XWTRNaTAwWkRBMkxUUmxOakl0WW1aa055MWlaV0pqT0RCbE5UVTJZMlJBZFc1eExtZGliQzV6Y0dGalpYTXZiV1Z6YzJGblpYTXZNVGN4TkRFME16WXlOelUzT1E9PXw4YWI0ZjBjY2ZiNjY0ODlhNzdlNjA4ZGM2NjAxOWM4NXw4YjRlYzIzNGUzOWE0ZGZmOWRjNTE5N2U3MTJkMWMyZA%3D%3D&sdata=Z0FWdGVRVzBEVFBsczNGVzVTR3JhQmRLd1VCZkc1cFh4Q0ZlZElCSzVYYz0%3D&ovuser=ca8f09f5-335e-4fc5-8041-f5b472a02eef%2CANDRES.ORTIZ%40inegi.org.mx){target="_blank"}
-
-### [SAPP](https://365inegi.sharepoint.com/sites/dgiai/100_DGG_DGIAII/150_DAA_DGAI/SAPP/SitePages/Inicio1.aspx){target="_blank"}
-
-<br>
-<br>
-
-
-
-
-
-# **Marcos de referencia**
-
-<br>
-
-## **DAMA y TOGAF**
 <br>
 
 ### [DAMA-DMBOK](pdfs/DAMA-DMBOK.pdf){target="_blank"}
 
+<br>
+
 ### [Estándar TOGAF](pdfs/togaf-standard9.2.pdf){target="_blank"}
 
+<br>
+
 ### [Glosario TOGAF](pdfs/TOGAF_GlosarioEspañol_OG.pdf){target="_blank"}
+
+<br>
 
 ### [Diagramado TOGAF](pdfs/Data Architecture.pdf){target="_blank"}
 
 <br>
 
-## **BPM y Arquitectura Empresarial**
+### [Definición de principios de arquitectura para arquitectura empresarial de la organización](pdfs/IBERO-Handbook_MR_1-43-52.pdf){target="_blank"}
 
 <br>
-
-### [Definición de principios de arquitectura para arquitectura empresarial de la organización](pdfs/IBERO-Handbook_MR_1-43-52.pdf){target="_blank"}
 
 ### [Business Process Management](https://bpmnotebook.wordpress.com/modelos-operacionales/){target="_blank"}
 
+<br>
 
 ### [Modelo de Arquitectura Organizacional para Empresas Medianas en México](pdfs/Arquitectura Empresarial - Victor Amezcua - Final para impresión1.pdf){target="_blank"}
 
-### [Lineamientos para la AI](https://365inegi-my.sharepoint.com/:w:/r/personal/raul_mejia_inegi_org_mx/_layouts/15/Doc.aspx?sourcedoc=%7BB8C9B8BC-3A2A-4B2E-900D-4EDB7E69CB11%7D&file=Lineamientos_AI.docx&action=default&mobileredirect=true){target="_blank"}
+<br>
+
+
+
+### [CSPA](https://statswiki.unece.org/display/CSPA/Common+Statistical+Production+Architecture){target="_blank"}
 
 <br>
 
-## **UNECE**
+### [CSDA 2.0](https://statswiki.unece.org/display/DA/CSDA+2.0){target="_blank"}
 
 <br>
 
-### [GSBPM Wiki](https://statswiki.unece.org/display/GSBPM/Generic+Statistical+Business+Process+Model){target="_blank"}
-
-### [GSBPM Documento](https://365inegi.sharepoint.com/:w:/s/dgiai/100_DGG_DGIAII/150_DAA_DGAI/EXDoX3rQTodMubQp8i_902YBj5MbF6mf-0S4IJIvGf-Vig?e=xCtDOt){target="_blank"}
-
-### [GSBPM Finer level Wiki](https://statswiki.unece.org/display/GSBPM/Finer-level+of+Activities+of+Generic+Statistical+Business+Process+Model){target="_blank"} 
-
-### [GSBPM Finer level Documento](https://365inegi.sharepoint.com/:w:/s/dgiai/100_DGG_DGIAII/150_DAA_DGAI/EcEHCZ4CyZRJtyOpECY2p_IBBv5bZtSjdVtK69EMErCZpQ?e=Jkgwfu){target="_blank"} 
-
-### [CSPA 1.5 Wiki](https://statswiki.unece.org/display/CSPA/Common+Statistical+Production+Architecture){target="_blank"}
-
-### [CSPA 1.5 Documento](https://365inegi.sharepoint.com/:w:/s/dgiai/100_DGG_DGIAII/150_DAA_DGAI/EZYmNsvgqKxLhEsiWDNFA4MBPQ9lkCNQkj0WaKSVmoKvJA?e=ni9jKu){target="_blank"}
-
-### [CSDA 2.0 Wiki](https://statswiki.unece.org/display/DA/CSDA+2.0){target="_blank"}
-
-### [CSDA 2.0 Documento](https://365inegi.sharepoint.com/:w:/s/dgiai/100_DGG_DGIAII/150_DAA_DGAI/EWOxF1zhXUZBnowWxhVrzIYBCWlj4RfYRMg0Rh4WH5jj2Q?e=rxyXx4){target="_blank"}
-
-### [GSIM 2.0 ](https://unece.github.io/GSIM-2.0/GSIMv2.html){target="_blank"}
-
-### [GSIM 1.2 Glosario](https://statswiki.unece.org/display/gsim/GSIM+v1.2+Glossary){target="_blank"}
-
-### [Linking GSBPM - GSIM](https://365inegi.sharepoint.com/:w:/r/sites/dgiai/100_DGG_DGIAII/150_DAA_DGAI/_layouts/15/Doc.aspx?sourcedoc=%7B26721B38-5274-45AE-BEBB-93AC00F4369C%7D&file=Linking%20GSBPM%20and%20GSIM%20task%20team%20report.docx&action=default&mobileredirect=true){target="_blank"}
-
-### [Information flow within GSBPM using GSIM](https://statswiki.unece.org/display/GSBPM/Information+flow+within+GSBPM+using+GSIM){target="_blank"}
-
-### [Mapping to GSIM Business Group](https://github.com/linked-statistics/COOS/issues/4){target="_blank"}
-
-### [Mapping GSIM - SDMX - DDI ](https://statswiki.unece.org/display/gsim/GSIM+and+standards){target="_blank"}
+### [GSIM 1.2](https://statswiki.unece.org/display/gsim/GSIM+v1.2+Communication+Paper){target="_blank"}
 
 <br>
 
-## **SDMX y DDI**
+
+### [GSIM 2.0](https://unece.github.io/GSIM-2.0/GSIMv2){target="_blank"}
 
 <br>
 
-### [SDMX Documentation](https://sdmx.org/wp-content/uploads/SDMX_3-0-0_SECTION_2_FINAL-1_0.pdf){target="_blank"}
 
-### [DDI Documentation](https://ddialliance.github.io/ddimodel-web/DDI-L-3.3/topics/All%20Content%20Items/){target="_blan"}
+### [GSBPM 5.1](https://statswiki.unece.org/spaces/GSBPM/pages/8683538/Generic+Statistical+Business+Process+Model){target="_blank"}
 
-### [SDMX Project Management Guideline](https://statswiki.unece.org/display/SDMXPM/Checklist+for+SDMX+Design+Projects+Home){target="_blan"}
+<br>
 
-	
+
+### [Linking GSBPM - GSIM](https://statswiki.unece.org/spaces/GSBPM/pages/330370507/Information+flow+within+GSBPM+using+GSIM){target="_blank"}
+
+
+<br>
+
+
+### [Actividades NTPPIEG](pdfs\Actividades_NTPPIEG.pdf){target="_blank"}
+
+<br>
+
+
+### [GAMSO](https://www.iweps.be/wp-content/uploads/2023/01/Generic-Activity-Model-for-Statistical-Organisations-%E2%80%93-GAMSO-Version-1.2-January-2019.pdf){target="_blank"}
+
+
+
+<br>
+
+
+### [Finer-level of GSBPM](https://statswiki.unece.org/spaces/GSBPM/pages/375095436/Finer-level+of+Activities+of+Generic+Statistical+Business+Process+Model){target="_blank"}
+
+
 
 
 <br>
 <br>
+
+
 
 

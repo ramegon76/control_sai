@@ -12,36 +12,23 @@ title: "**Administrativos**"
 <br>
 
 
-### [Sistema Institucional de Archivos](https://365inegi.sharepoint.com/sites/sia/SitePages/Inicio.aspx){target="_blank"} 
-### [SIA Gestión Archivos](https://sia.inegi.org.mx/sia_gestion/index.jsp){target="_blank"} 
+### [SIA Recursos Humanos](https://sia.inegi.org.mx/index.jsp){target="_blank"} 
+
+<br>
+
+
+### [SIA Archivo de trámite](https://sia.inegi.org.mx/sia_gestion/index.jsp){target="_blank"} 
 
 <br>
 <br>
 
 
-# **Sitios personales**
+# **Extranet**
 
 <br>
 
-### [One Drive Personal](https://365inegi-my.sharepoint.com/personal/raul_mejia_inegi_org_mx/_layouts/15/onedrive.aspx){target="_blank"} 
-
-### [Github Personal](https://github.com/ramegon76){target="_blank"}
-
-### [Tablero PTracking editable](https://ramegon76.github.io/tablero_ptracking/){target="_blank"}
-
-### [Funciones de la DGAII](https://365inegi-my.sharepoint.com/:p:/r/personal/raul_mejia_inegi_org_mx/_layouts/15/Doc.aspx?sourcedoc=%7BD08B93AA-75BE-47C4-AF52-076F65997FA9%7D&file=3.%20Estructura_Funciones_NuevaDGAII.pptx&action=edit&mobileredirect=true){target="_blank"}
-
-
-
-<br>
-<br>
-
-
-# **Otros**
+### [Entrada (login)](https://extranet.inegi.org.mx/index.html){target="_blank"} 
 
 <br>
 
-### [Extranet (login)](https://extranet.inegi.org.mx/login.html){target="_blank"} 
 
-
-### [Capacitación al clic](https://365inegi.sharepoint.com/sites/Capacitacionalclic){target="_blank"}
