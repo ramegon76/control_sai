@@ -1,5 +1,5 @@
 ---
-title: "**Arquitecturas**"
+title: "**Arquitectura de la Información**"
 --- 
 <br>
 <br>
@@ -65,7 +65,7 @@ Se refiere a la definición del esquema de los componentes (actores, modelos de 
 <br>
 
 
-### [GSIM 2.0](https://unece.github.io/GSIM-2.0/GSIMv2){target="_blank"}
+### [GSIM 2.0](https://unece.github.io/GSIM-2.0/){target="_blank"}
 
 <br>
 
